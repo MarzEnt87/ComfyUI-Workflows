@@ -12,4 +12,4 @@ Amd Ryzen 7 3700X
 RTX 3060 12gb VRAM
 
 
-#Examples:
+Examples:

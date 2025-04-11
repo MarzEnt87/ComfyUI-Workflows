@@ -13,3 +13,4 @@ RTX 3060 12gb VRAM
 
 
 Examples:
+https://github.com/MarzEnt87/ComfyUI-Workflows/blob/921fee60dd7f553578c4d1b8d3ac1435a611c3b6/screenshots/Marz_Wan2.1_I2V.png

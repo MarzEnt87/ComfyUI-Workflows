@@ -7,6 +7,7 @@ My PC Specs: Amd Ryzen 7 3700X 32 Gb Ram RTX 3060 12gb VRAM
 Examples: 
 Image Realism Enhancer I2I
 ![image alt](https://github.com/MarzEnt87/ComfyUI-Workflows/blob/5f08e83cd026453f76f9ae540cc46653a9545e37/screenshots/Marz_Wan2.1_T2V.png)
+
 ![image alt](https://github.com/MarzEnt87/ComfyUI-Workflows/blob/216412a1cbc67518439ec7a8910bee536d353acc/screenshots/Marz_Wan2.1_I2V.png)
 
 ![image alt](https://github.com/MarzEnt87/ComfyUI-Workflows/blob/f8b6e84dc3cec7663a322e802ac8d53706c52ffa/screenshots/Marz_Wan2.1_T2V.png)

@@ -1,0 +1,1269 @@
+{
+  "id": "f5f07386-104a-44c3-a618-e7600c9611e3",
+  "revision": 0,
+  "last_node_id": 65,
+  "last_link_id": 90,
+  "nodes": [
+    {
+      "id": 50,
+      "type": "LoadImage",
+      "pos": [
+        -2235.3251953125,
+        -356.65496826171875
+      ],
+      "size": [
+        670,
+        490
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            71,
+            86
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "LoadImage",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Camila Beta 4.png",
+        "image"
+      ]
+    },
+    {
+      "id": 57,
+      "type": "Note",
+      "pos": [
+        -2734.5087890625,
+        -198.5794677734375
+      ],
+      "size": [
+        473.2573547363281,
+        232.35240173339844
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Prompt Notes",
+      "properties": {},
+      "widgets_values": [
+        "Prompt Notes\n\n\"Look Enhancement\"\nA highly detailed RAW photo, shot on a professional camera++, natural looking skin++, realistic skin texture++, Photoreal UHD, color graded Kodak portra 400 film shot on a Canon R5 with a 35mm f/2.8, Iphone Photography,\n\n\n\n\"Negative Prompt\"\nOverexposure, static, blurred details, subtitles, paintings, pictures, still, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, redundant fingers, poorly painted hands, poorly painted face, deformed, disfigured, deformed limbs, fused fingers, cluttered background, three legs, alot of people in the background"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 62,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        -1537.807373046875,
+        -397.886474609375
+      ],
+      "size": [
+        804.4885864257812,
+        1049.9619140625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 86
+        },
+        {
+          "dir": 3,
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2508192121",
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_zggjp_00009_.png&type=temp&subfolder=&rand=0.10179503482672703"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_zggjp_00010_.png&type=temp&subfolder=&rand=0.42687575090247765"
+          }
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        -2236.505126953125,
+        324.9698181152344
+      ],
+      "size": [
+        350,
+        60
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "title": "Wan2.2 T2V Low Noise GGUF",
+      "properties": {
+        "cnr_id": "ComfyUI-GGUF",
+        "ver": "b3ec875a68d94b758914fd48d30571d953bb7a54",
+        "Node name for S&R": "UnetLoaderGGUF",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Wan2.2-T2V-A14B-LowNoise-Q6_K.gguf"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 13,
+      "type": "PathchSageAttentionKJ",
+      "pos": [
+        -1877.5784912109375,
+        322.17291259765625
+      ],
+      "size": [
+        310,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.3",
+        "Node name for S&R": "PathchSageAttentionKJ",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "auto"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 3,
+      "type": "CLIPLoader",
+      "pos": [
+        -1877.557861328125,
+        418.89569091796875
+      ],
+      "size": [
+        310,
+        106
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "CLIPLoader",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 9,
+      "type": "VAELoader",
+      "pos": [
+        -1879.91943359375,
+        556.9110717773438
+      ],
+      "size": [
+        314.0868835449219,
+        68.14883422851562
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            31,
+            67
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "VAELoader",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Wan2.1/Wan2.1_VAE.safetensors"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 52,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        -712.6196899414062,
+        -340.9384765625
+      ],
+      "size": [
+        390,
+        336
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 71
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            72
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
+        "Node name for S&R": "ImageResizeKJv2",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        1280,
+        1280,
+        "nearest-exact",
+        "resize",
+        "0, 0, 0",
+        "center",
+        2,
+        "gpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>1280</b> x <b>1280 | 18.75MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 56,
+      "type": "InjectLatentNoise+",
+      "pos": [
+        -315.54925537109375,
+        -342.6340026855469
+      ],
+      "size": [
+        250,
+        150
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 85
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "InjectLatentNoise+",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        700138042359882,
+        "randomize",
+        0.25
+      ]
+    },
+    {
+      "id": 23,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        -313.9226379394531,
+        -155.34352111816406
+      ],
+      "size": [
+        250,
+        334
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 79
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 80
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 81
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            83
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "Node name for S&R": "KSamplerAdvanced",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "enable",
+        147384721630781,
+        "randomize",
+        5,
+        1,
+        "euler",
+        "simple",
+        1,
+        10000,
+        "disable"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 25,
+      "type": "VAEDecode",
+      "pos": [
+        -704.5333862304688,
+        116.73081970214844
+      ],
+      "size": [
+        250,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 83
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            87,
+            90
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "VAEDecode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 51,
+      "type": "VAEEncode",
+      "pos": [
+        -706.4495239257812,
+        31.602603912353516
+      ],
+      "size": [
+        250,
+        46
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 72
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            85
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.48",
+        "Node name for S&R": "VAEEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -712.8381958007812,
+        265.16241455078125
+      ],
+      "size": [
+        643.1484375,
+        154.86534118652344
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "title": "Positive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Instagirl, A highly detailed RAW photo, shot on a professional camera++, natural looking skin, realistic skin texture, Photoreal UHD, color graded Kodak portra 400 film shot on a Canon R5 with a 35mm f/2.8, Iphone Photography,"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 1,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -713.7465209960938,
+        451.48162841796875
+      ],
+      "size": [
+        640.879638671875,
+        115.05839538574219
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            81
+          ]
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "CLIPTextEncode",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Overexposure, static, blurred details, subtitles, paintings, pictures, still, overall gray, worst quality, low quality, JPEG compression residue, ugly, mutilated, redundant fingers, poorly painted hands, poorly painted face, deformed, disfigured, deformed limbs, fused fingers, cluttered background, three legs, alot of people in the background"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 58,
+      "type": "Note",
+      "pos": [
+        -2721.050048828125,
+        67.2868423461914
+      ],
+      "size": [
+        447.0000305175781,
+        271
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Model Links For Model Manager",
+      "properties": {},
+      "widgets_values": [
+        "Wan 2.2 And VAE\n- Wan2.2 t2v A14B Low Noise\nhttps://huggingface.co/QuantStack/Wan2.2-T2V-A14B-GGUF\n\nInstagirl Lora (Style Lora)\nhttps://civitai.com/models/1822984/instagirl-wan-22\n\nWanFusionX Lora (Style Lora)\n-Wan 2.1 T2V 14B FusionX Lora\nhttps://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX\n\nLightx2 Lora (Speed Lora) Strength 1\n-lightx2v_T2V_14B_cgf_step_distilled_v2_Lora_Rank64_Bf16\nhttps://huggingface.co/Kijai/WanVideo_comfy\n\nwan2.2 lightning 4 step (Strength 1)\nhttps://huggingface.co/lightx2v/Wan2.2-Lightning\n\nClip\numt5_xxl_fp8_e4m3fn_scaled"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 65,
+      "type": "SaveImage",
+      "pos": [
+        -51.054954528808594,
+        -396.8350830078125
+      ],
+      "size": [
+        449.07086181640625,
+        571.3507080078125
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 90
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.52"
+      },
+      "widgets_values": [
+        "Wan2.2 I2I"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "Note",
+      "pos": [
+        -2720.411376953125,
+        374.7563781738281
+      ],
+      "size": [
+        440.8230285644531,
+        219.25926208496094
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Model Direct Download",
+      "properties": {},
+      "widgets_values": [
+        "Wan 2.2 Low Noise\nhttps://huggingface.co/QuantStack/Wan2.2-T2V-A14B-GGUF/blob/main/LowNoise/Wan2.2-T2V-A14B-LowNoise-Q5_0.gguf\n\nWan 2.1 Vae\nhttps://huggingface.co/QuantStack/Wan2.2-T2V-A14B-GGUF/resolve/main/VAE/Wan2.1_VAE.safetensors\n\nFusionX Lora\nhttps://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/resolve/main/FusionX_LoRa/Wan2.1_T2V_14B_FusionX_LoRA.safetensors\n\nLigtx2 Lora\nhttps://huggingface.co/Kijai/WanVideo_comfy/blob/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 64,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        -2239.60595703125,
+        420.5395202636719
+      ],
+      "size": [
+        350.4197998046875,
+        142.93026733398438
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "model",
+          "type": "MODEL",
+          "link": 89
+        },
+        {
+          "dir": 3,
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "MODEL",
+          "shape": 3,
+          "type": "MODEL",
+          "links": [
+            88
+          ]
+        },
+        {
+          "dir": 4,
+          "name": "CLIP",
+          "shape": 3,
+          "type": "CLIP",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2508241658",
+        "Show Strengths": "Single Strength"
+      },
+      "widgets_values": [
+        {},
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "Wan 2.2 Loras/Insatgirlv2.3_low.safetensors",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {},
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -2232.385009765625,
+        644.7134399414062
+      ],
+      "size": [
+        355.6918029785156,
+        82
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "title": "Accelerator Lora",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Wan 2.2 Accelerator Lora/Wan2.2-Lightning_I2V-A14B-4steps-lora_LOW_fp16.safetensors",
+        1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 12,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        -2236.598388671875,
+        167.3035430908203
+      ],
+      "size": [
+        663.9556274414062,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "title": "Model Sampling SD3 (Variance Strengh)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.47",
+        "Node name for S&R": "ModelSamplingSD3",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        0.1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 63,
+      "type": "Note",
+      "pos": [
+        -2735.67333984375,
+        -399.5595397949219
+      ],
+      "size": [
+        478.8664245605469,
+        170.73394775390625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Operational Notes",
+      "properties": {},
+      "widgets_values": [
+        "Denoising Strength (Variation from orignal image) should be changed on node\n\"Model Sampling SD3\"\nExample Strenth Levels: Light (.1), Strong (.2), Strongest (.5)\n\nRecomended Changes in increments of .1\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      1,
+      0,
+      "CLIP"
+    ],
+    [
+      6,
+      3,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      16,
+      13,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      31,
+      9,
+      0,
+      25,
+      1,
+      "VAE"
+    ],
+    [
+      67,
+      9,
+      0,
+      51,
+      1,
+      "VAE"
+    ],
+    [
+      71,
+      50,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      52,
+      0,
+      51,
+      0,
+      "IMAGE"
+    ],
+    [
+      73,
+      2,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      79,
+      12,
+      0,
+      23,
+      0,
+      "MODEL"
+    ],
+    [
+      80,
+      6,
+      0,
+      23,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      81,
+      1,
+      0,
+      23,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      83,
+      23,
+      0,
+      25,
+      0,
+      "LATENT"
+    ],
+    [
+      84,
+      56,
+      0,
+      23,
+      3,
+      "LATENT"
+    ],
+    [
+      85,
+      51,
+      0,
+      56,
+      0,
+      "LATENT"
+    ],
+    [
+      86,
+      50,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      25,
+      0,
+      62,
+      1,
+      "IMAGE"
+    ],
+    [
+      88,
+      64,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      89,
+      16,
+      0,
+      64,
+      0,
+      "MODEL"
+    ],
+    [
+      90,
+      25,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Image Loader & Condition",
+      "bounding": [
+        -2250,
+        -430,
+        690.8173828125,
+        668.7505493164062
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Inference",
+      "bounding": [
+        -727.3239135742188,
+        -427.02447509765625,
+        667.6403198242188,
+        615.7598266601562
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 4,
+      "title": "Model Loader Low Noise",
+      "bounding": [
+        -2244.438232421875,
+        248.50003051757812,
+        681.3143920898438,
+        402.3711242675781
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 5,
+      "title": "Prompt Conditions",
+      "bounding": [
+        -722.5762329101562,
+        195.9488067626953,
+        657.5322265625,
+        379.14581298828125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.716662395508881,
+      "offset": [
+        2994.5954442738675,
+        684.1025841965186
+      ]
+    },
+    "frontendVersion": "1.25.10",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

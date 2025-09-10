@@ -126,42 +126,6 @@
       ]
     },
     {
-      "id": 159,
-      "type": "82a0252a-ffaa-4640-b7e1-9a03ac43f1ac",
-      "pos": [
-        1537.4617919921875,
-        117.949462890625
-      ],
-      "size": [
-        395.23150634765625,
-        112.04239654541016
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 131
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            132
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.57"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 146,
       "type": "LoadImage",
       "pos": [
@@ -200,55 +164,6 @@
         "Wan2.2 I2I_00004_.png",
         "image"
       ]
-    },
-    {
-      "id": 177,
-      "type": "5afa24b6-c4e7-44ab-89dd-ad1a1d517c33",
-      "pos": [
-        470.83038330078125,
-        109.10514068603516
-      ],
-      "size": [
-        140,
-        46
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image1",
-          "type": "IMAGE",
-          "link": 161
-        },
-        {
-          "name": "image2",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 162
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            163
-          ]
-        },
-        {
-          "name": "IMAGE_1",
-          "type": "IMAGE",
-          "links": [
-            164
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.57"
-      },
-      "widgets_values": []
     },
     {
       "id": 157,
@@ -383,6 +298,92 @@
         "customSortAlphabet": "",
         "toggleRestriction": "default"
       }
+    },
+    {
+      "id": 177,
+      "type": "5afa24b6-c4e7-44ab-89dd-ad1a1d517c33",
+      "pos": [
+        470.83038330078125,
+        109.10514068603516
+      ],
+      "size": [
+        278.69708251953125,
+        58.51401901245117
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image1",
+          "type": "IMAGE",
+          "link": 161
+        },
+        {
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            163
+          ]
+        },
+        {
+          "name": "IMAGE_1",
+          "type": "IMAGE",
+          "links": [
+            164
+          ]
+        }
+      ],
+      "title": "Workflow",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 159,
+      "type": "82a0252a-ffaa-4640-b7e1-9a03ac43f1ac",
+      "pos": [
+        1537.4617919921875,
+        117.949462890625
+      ],
+      "size": [
+        395.23150634765625,
+        112.04239654541016
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            132
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.57"
+      },
+      "widgets_values": []
     }
   ],
   "links": [
@@ -634,90 +635,6 @@
             },
             "widgets_values": [
               "2.1 Vae/Wan2.1_VAE.safetensors"
-            ]
-          },
-          {
-            "id": 118,
-            "type": "LoraLoaderModelOnly",
-            "pos": [
-              819.474365234375,
-              1217.041259765625
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 72
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "MODEL",
-                "name": "MODEL",
-                "type": "MODEL",
-                "links": [
-                  73
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.57",
-              "Node name for S&R": "LoraLoaderModelOnly"
-            },
-            "widgets_values": [
-              "Wan2.2-Lightning_T2V-v1.1-A14B-4steps-lora_LOW_fp16.safetensors",
-              1
-            ]
-          },
-          {
-            "id": 119,
-            "type": "LoraLoaderModelOnly",
-            "pos": [
-              1130.18701171875,
-              1217.0408935546875
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 73
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "MODEL",
-                "name": "MODEL",
-                "type": "MODEL",
-                "links": [
-                  76
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.57",
-              "Node name for S&R": "LoraLoaderModelOnly"
-            },
-            "widgets_values": [
-              "extract-outfit_v3.safetensors",
-              1.75
             ]
           },
           {
@@ -1074,6 +991,92 @@
               "Node name for S&R": "VAEDecode"
             },
             "widgets_values": []
+          },
+          {
+            "id": 118,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              819.474365234375,
+              1217.041259765625
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 72
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  73
+                ]
+              }
+            ],
+            "title": "Lighting Lora",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.57",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "Wan2.2-Lightning_T2V-v1.1-A14B-4steps-lora_LOW_fp16.safetensors",
+              1
+            ]
+          },
+          {
+            "id": 119,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              1130.18701171875,
+              1217.0408935546875
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 73
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  76
+                ]
+              }
+            ],
+            "title": "Extract Outfit Lora",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.57",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "extract-outfit_v3.safetensors",
+              1.75
+            ]
           }
         ],
         "groups": [],
@@ -1228,7 +1231,7 @@
         },
         "revision": 0,
         "config": {},
-        "name": "New Subgraph",
+        "name": "Workflow",
         "inputNode": {
           "id": -10,
           "bounding": [
@@ -1411,90 +1414,6 @@
             },
             "widgets_values": [
               "Wan Image Edit/Qwen_Image-VAE.safetensors"
-            ]
-          },
-          {
-            "id": 170,
-            "type": "LoraLoaderModelOnly",
-            "pos": [
-              -137.5040740966797,
-              -334.7201843261719
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 153
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "MODEL",
-                "name": "MODEL",
-                "type": "MODEL",
-                "links": [
-                  154
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.57",
-              "Node name for S&R": "LoraLoaderModelOnly"
-            },
-            "widgets_values": [
-              "Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors",
-              1
-            ]
-          },
-          {
-            "id": 171,
-            "type": "LoraLoaderModelOnly",
-            "pos": [
-              157.6431427001953,
-              -336.4320068359375
-            ],
-            "size": [
-              270,
-              82
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 154
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "MODEL",
-                "name": "MODEL",
-                "type": "MODEL",
-                "links": [
-                  155
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.3.57",
-              "Node name for S&R": "LoraLoaderModelOnly"
-            },
-            "widgets_values": [
-              "clothes_tryon_qwen-edit-lora.safetensors",
-              1.5
             ]
           },
           {
@@ -2026,6 +1945,92 @@
               "ver": "0.3.57",
               "Node name for S&R": "VAEDecode"
             }
+          },
+          {
+            "id": 170,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              -137.5040740966797,
+              -334.7201843261719
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 4,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 153
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  154
+                ]
+              }
+            ],
+            "title": "Lighting Lora",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.57",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "Qwen-Image-Edit-Lightning-4steps-V1.0.safetensors",
+              1
+            ]
+          },
+          {
+            "id": 171,
+            "type": "LoraLoaderModelOnly",
+            "pos": [
+              157.6431427001953,
+              -336.4320068359375
+            ],
+            "size": [
+              270,
+              82
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 154
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "MODEL",
+                "name": "MODEL",
+                "type": "MODEL",
+                "links": [
+                  155
+                ]
+              }
+            ],
+            "title": "Try On Lora",
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.3.57",
+              "Node name for S&R": "LoraLoaderModelOnly"
+            },
+            "widgets_values": [
+              "clothes_tryon_qwen-edit-lora.safetensors",
+              1.5
+            ]
           }
         ],
         "groups": [],
@@ -2222,10 +2227,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3969444806489473,
+      "scale": 0.6392830555299361,
       "offset": [
-        -230.02080103289404,
-        103.58094259270172
+        -234.32037686676983,
+        80.6061955427185
       ]
     },
     "frontendVersion": "1.25.11",
